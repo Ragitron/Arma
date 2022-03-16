@@ -105,7 +105,11 @@ class cfgWeapons
     scope=1;
     class LinkedItems
     {
-
+      class LinkedItemsOptic
+      {
+        slot="CowSlot";
+        item="rhsusf_acc_ACOG3";
+      };
       class LinkedItemsAcc
       {
         slot="PointerSlot";
@@ -239,7 +243,11 @@ class cfgWeapons
     scope=1;
     class LinkedItems
     {
-
+      class LinkedItemsOptic
+      {
+        slot="CowSlot";
+        item="BWA3_optic_PMII_ShortdotCC";
+      };
       class LinkedItemsUnder
       {
         slot="UnderBarrelSlot";
@@ -422,7 +430,11 @@ class cfgWeapons
     scope=1;
     class LinkedItems
     {
-
+      class LinkedItemsOptic
+      {
+        slot="CowSlot";
+        item="rhsusf_acc_eotech_552_d";
+      };
       class LinkedItemsAcc
       {
         slot="PointerSlot";
@@ -587,7 +599,11 @@ class cfgWeapons
     scope=1;
     class LinkedItems
     {
-
+      class LinkedItemsOptic
+      {
+        slot="CowSlot";
+        item="rhsusf_acc_eotech_552_d";
+      };
       class LinkedItemsAcc
       {
         slot="PointerSlot";

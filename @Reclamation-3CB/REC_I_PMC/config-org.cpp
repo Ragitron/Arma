@@ -731,6 +731,7 @@ class cfgVehicles
   class O_Heli_Transport_04_covered_F;
   class RHSGREF_A29B_HIDF;
   class UK3CB_C_AC500;
+  class MainTurret;
 
   class I_RC_PMC_Squad_Leader: O_Soldier_SL_F
   {
@@ -1684,13 +1685,37 @@ class cfgVehicles
     typicalCargo[]={"I_RC_PMC_Tactical_Driver"};
   };
 
-  class I_RC_PMC_TZ_233B_Armed: rhs_tigr_sts_3camo_msv
+  class I_RC_PMC_TZ_233B_Armed_Par: rhs_tigr_sts_3camo_msv
+  {
+    displayName="TZ 233B";
+    scope = 0;
+
+    class Turrets;
+  };
+
+  class I_RC_PMC_TZ_233B_Armed_Par2: I_RC_PMC_TZ_233B_Armed_Par
+  {
+    class Turrets: Turrets
+    {
+      class MainTurret;
+      class AGS_turret;
+    }
+  };
+
+  class I_RC_PMC_TZ_233B_Armed: I_RC_PMC_TZ_233B_Armed_Par2
   {
     faction="I_RC_PMC_Semien_Solutions";
     side=2;
     displayName="TZ 233B Armed";
     hiddenSelectionsTextures[]={"rhsafrf\addons\rhs_tigr\data\rhs_tigr_co_camo.paa","rhsafrf\addons\rhs_tigr\data\rhs_tigr_int_01_co.paa","rhsafrf\addons\rhs_tigr\data\rhs_tigr_int_02_co.paa","rhsafrf\addons\rhs_tigr\sts_proxies\data\tigr_ext_ads_co.paa","rhsafrf\addons\rhs_tigr\m_proxies\data\tigr_m_adds_co.paa","rhsafrf\addons\rhs_decals\data\numbers\default\1_ca.paa","rhsafrf\addons\rhs_decals\data\numbers\default\6_ca.paa","rhsafrf\addons\rhs_decals\data\numbers\default\3_ca.paa","rhsafrf\addons\rhs_decals\data\numbers\default\7_ca.paa","rhsafrf\addons\rhs_decals\data\labels\platoon\18th_msv_ca.paa","rhsafrf\addons\rhs_decals\data\labels\platoon\18th_msv_ca.paa","",""};
     crew="I_RC_PMC_Tactical_Driver";
+    class Turrets
+    {
+      class MainTurret: MainTurret
+      {
+        gunnerType = "I_RC_PMC_Rifleman_Light";
+      }
+    }
     typicalCargo[]={"I_RC_PMC_Tactical_Driver"};
   };
 
@@ -1701,6 +1726,13 @@ class cfgVehicles
     displayName="TZ 233B Open Top";
     hiddenSelectionsTextures[]={"rhsafrf\addons\rhs_tigr\data\rhs_tigr_co_camo.paa","rhsafrf\addons\rhs_tigr\data\rhs_tigr_int_01_co.paa","rhsafrf\addons\rhs_tigr\data\rhs_tigr_int_02_co.paa","rhsafrf\addons\rhs_tigr\sts_proxies\data\tigr_ext_ads_co.paa","rhsafrf\addons\rhs_tigr\m_proxies\data\tigr_m_adds_co.paa","rhsafrf\addons\rhs_decals\data\numbers\default\2_ca.paa","rhsafrf\addons\rhs_decals\data\numbers\default\2_ca.paa","rhsafrf\addons\rhs_decals\data\numbers\default\1_ca.paa","rhsafrf\addons\rhs_decals\data\numbers\default\9_ca.paa","rhsafrf\addons\rhs_decals\data\labels\platoon\18th_msv_ca.paa","rhsafrf\addons\rhs_decals\data\labels\platoon\18th_msv_ca.paa","",""};
     crew="I_RC_PMC_Tactical_Driver";
+    class Turrets
+    {
+      class MainTurret
+      {
+        gunnerType = "I_RC_PMC_Machine_Gunner";
+      }
+    }
     typicalCargo[]={"I_RC_PMC_Tactical_Driver"};
   };
 
